@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "No pre-build steps"
+    build:
+      commands:
+        - mkdir -p dist
+        - cp -r public/* dist/
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths: []
